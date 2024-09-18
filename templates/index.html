@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data summarization Tool</title>
+    <!-- Import Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Import Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<style>
+  body{
+    font-size: 18px;
+  }
+</style>
+<body>
+    <div class="container" style = "width: 100%; padding:10px;">
+        <div class="row">
+            <!-- Bên trái: Nhập dữ liệu -->
+            <div class="col s12 m6">
+                <h4><b>Nhập dữ liệu</b></h4>
+                <table class="highlight">
+                    <thead>
+                        <tr>
+                            <th>Giá trị</th>
+                            <th>Tần số</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data-table">
+                        <tr>
+                            <td><input type="number" class="value-input" placeholder="Nhập giá trị"></td>
+                            <td><input type="number" class="frequency-input" placeholder="Nhập tần số"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button id="add-row" class="btn waves-effect waves-light" style = "margin-top:10px;">Thêm hàng</button>
+                <button id="delete-row" class="btn waves-effect waves-light" style = "margin-top:10px;">Xóa hàng</button>
+                <button id="calculate" class="btn" style = "margin-top:10px;">Tính toán</button>
+            </div>
+
+            <!-- Bên phải: Các chức năng -->
+            <div class="col s12 m6">
+                <h4><b>Kết quả</b></h4>
+                <div id="results">
+                </div>
+            </div>
+        </div>
+        <div class="row" id="plot"></div>
+    </div>
+
+    <!-- Import Materialize and JavaScript libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../static/javascript/script.js"></script>
+</body>
+</html>
