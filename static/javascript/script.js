@@ -67,40 +67,40 @@ function calculate() {
               </thead>
               <tbody>
                 <tr>
-                  <td><b>Mean</b></td>
-                  <td><b>${response.mean}</b></td>
+                  <td>Mean</td>
+                  <td>${response.mean}</td>
                 </tr>
                 <tr>
-                  <td><b>Median</b></td>
-                  <td><b>${response.median}</b></td>
+                  <td>Median</td>
+                  <td>${response.median}</td>
                 </tr>
                 <tr>
-                  <td><b>Mode</b></td>
-                  <td><b>${response.mode}</b></td>
+                  <td>Mode</td>
+                  <td>${response.mode}</td>
                 </tr>
                 <tr>
-                  <td><b>Midrange</b></td>
-                  <td><b>${response.midrange}</b></td>
+                  <td>Midrange</td>
+                  <td>${response.midrange}</td>
                 </tr>
                 <tr>
-                  <td><b>Q1</b></td>
-                  <td><b>${response.Q1}</b></td>
+                  <td>Q1</td>
+                  <td>${response.Q1}</td>
                 </tr>
                 <tr>
-                  <td><b>Q2</b></td>
-                  <td><b>${response.Q2}</b></td>
+                  <td>Q2</td>
+                  <td>${response.Q2}</td>
                 </tr>
                 <tr>
-                  <td><b>Q3</b></td>
-                  <td><b>${response.Q3}</b></td>
+                  <td>Q3</td>
+                  <td>${response.Q3}</td>
                 </tr>
                 <tr>
-                  <td><b>IQR</b></td>
-                  <td><b>${response.IQR}</b></td>
+                  <td>IQR</td>
+                  <td>${response.IQR}</td>
                 </tr>
                 <tr>
-                  <td><b>Variance</b></td>
-                  <td><b>${response.variance}</b></td>
+                  <td>Variance</td>
+                  <td>${response.variance}</td>
                 </tr>
               </tbody>
             </table>
