@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data summarization Tool</title>
+    <title>Data Summarization Tool</title>
     <!-- Import Materialize CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     <!-- Import Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <style>
-  body{
+  body {
     font-size: 18px;
+  }
+  .chart-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .chart {
+    width: 45%;
   }
 </style>
 <body>
-    <div class="container" style = "width: 100%; padding:10px;">
+    <div class="container" style="width: 100%; padding:10px;">
         <div class="row">
             <!-- Bên trái: Nhập dữ liệu -->
             <div class="col s12 m6">
@@ -34,19 +42,27 @@
                         </tr>
                     </tbody>
                 </table>
-                <button id="add-row" class="btn waves-effect waves-light" style = "margin-top:10px;">Thêm hàng</button>
-                <button id="delete-row" class="btn waves-effect waves-light" style = "margin-top:10px;">Xóa hàng</button>
-                <button id="calculate" class="btn" style = "margin-top:10px;">Tính toán</button>
+                <button id="add-row" class="btn waves-effect waves-light" style="margin-top:10px;">Thêm hàng</button>
+                <button id="delete-row" class="btn waves-effect waves-light" style="margin-top:10px;">Xóa hàng</button>
+                <button id="calculate" class="btn" style="margin-top:10px;">Tính toán</button>
             </div>
 
             <!-- Bên phải: Các chức năng -->
             <div class="col s12 m6">
                 <h4><b>Kết quả</b></h4>
-                <div id="results">
-                </div>
+                <div id="results"></div>
             </div>
         </div>
-        <div class="row" id="plot"></div>
+
+        <!-- Biểu đồ (boxplot và scatter chart) trên cùng một hàng -->
+        <div id="plot"></div>
+
+        <div class="chart-container">
+            <div class="chart" id="boxplot">
+            </div>
+            <div class="chart" id="scatter">
+            </div>
+        </div>
     </div>
 
     <!-- Import Materialize and JavaScript libraries -->
