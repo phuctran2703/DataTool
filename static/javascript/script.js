@@ -125,19 +125,50 @@ function calculate() {
         }
       }
 
+      const meanData = {
+        label: "Mean",
+        data: [{ x: response.mean, y: 0 }],
+        backgroundColor: "red", // Mean màu đỏ
+        borderColor: "red",
+        pointRadius: 7,
+        pointHoverRadius: 7,
+      };
+
+      const medianData = {
+        label: "Median",
+        data: [{ x: response.median, y: 0 }],
+        backgroundColor: "blue", // Median màu xanh dương
+        borderColor: "blue",
+        pointRadius: 7,
+        pointHoverRadius: 7,
+      };
+
+      const modeData = {
+        label: "Mode",
+        data: [{ x: response.mode, y: 0 }],
+        backgroundColor: "green", // Mode màu xanh lá cây
+        borderColor: "green",
+        pointRadius: 7,
+        pointHoverRadius: 7,
+      };
+
+
       const ctx = document.getElementById("scatterChart").getContext("2d");
       new Chart(ctx, {
         type: "scatter",
         data: {
           datasets: [
             {
-              label: "Scatter Chart",
+              label: "Data Points",
               data: scatterData,
               backgroundColor: "rgba(75, 192, 192, 1)",
               borderColor: "rgba(75, 192, 192, 0.2)",
               pointRadius: 5,
               pointHoverRadius: 7,
             },
+            meanData,
+            medianData,
+            modeData,
           ],
         },
         options: {
